@@ -184,7 +184,7 @@ function filter_css_class( $filter_id, $default = [] ) {
  * @param string $hook_name Any string.
  * @return string The modified string.
  */
-function darenorthward_hook( string $hook_name ) : string {
+function darenorthward_hook( $hook_name ) {
 	return Dare_Northward::FILTER_PREFIX . $hook_name;
 }
 
