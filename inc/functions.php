@@ -196,7 +196,7 @@ function darenorthward_hook( $hook_name ) {
  *                         use sprintf to apply args after the first to the first.
  * @return string URL.
  */
-function darenorthward_asset_url( string $filename = '' ) {
+function darenorthward_asset_url( $filename = '' ) {
 	$args = func_get_args();
 
 	if ( 1 < count( $args ) ) {
@@ -218,7 +218,7 @@ function darenorthward_asset_url( string $filename = '' ) {
  * @param string $filename A filename.
  * @return string Version string.
  */
-function darenorthward_file_version( string $filename ) {
+function darenorthward_file_version( $filename ) {
 	return filemtime( locate_template( sprintf( $filename, Dare_Northward::TEXT_DOMAIN ) ) );
 }
 
