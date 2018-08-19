@@ -48,7 +48,7 @@ class Media {
 	 * @param \WP_Post $post The current post.
 	 * @return boolean True or false.
 	 */
-	public function maybe_disable_header_image( bool $bool, \WP_Post $post ) {
+	public function maybe_disable_header_image( $bool, $post ) {
 		if ( in_category( [ 'events', 'news' ], $post ) ) {
 			return false;
 		}
