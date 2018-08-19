@@ -40,7 +40,7 @@ class Nav_Menu {
 	 * @param array $items The wp_nav_menu items.
 	 * @return array The filtered array.
 	 */
-	protected function assign_child_nav_items_to_parents( array $items ) : array {
+	protected function assign_child_nav_items_to_parents( array $items ) {
 
 		foreach ( $items as $item ) {
 			$item->children = array_filter(
