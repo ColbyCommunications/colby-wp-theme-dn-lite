@@ -1,0 +1,8 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<clipPath id="oblong-circle-path" clipPathUnits="objectBoundingBox">
+			<path fill="#77B3E1" d="M1,0.521c0,0.285-0.07,0.478-0.357,0.478C0.358,0.999,0,0.773,0,0.487c0-0.282,0.249-0.472,0.534-0.472
+				C0.82,0.016,1,0.238,1,0.521"/>
+	 </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,6 @@
+node_modules
+.vscode
+.DS_Store
+vendor
+!vendor/autoload.php
+!vendor/composer/*

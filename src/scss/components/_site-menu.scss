@@ -1,0 +1,188 @@
+// Styles for the main site menu
+
+.site-menu {
+	position: absolute;
+	top: 5.25rem;
+	right: 0.25rem;
+	visibility: hidden;
+	padding: 1.5rem;
+	background-color: $gray;
+
+	@media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+		right: 2.25rem;
+	}
+
+	&.active {
+		visibility: visible;
+	}
+
+	&__logo-container {
+		display: block;
+		padding: 0 0.75rem;
+
+		.colby-logo-svg {
+			width: 90px;
+
+			* {
+				color: $gray-dark;
+
+				fill: $gray-dark;
+			}
+		}
+
+		@media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+			display: none;
+		}
+	}
+
+	@media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+		visibility: visible;
+	}
+
+	&__item {
+		position: relative;
+		padding: 0.5rem 1rem;
+
+		@media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+			padding: 0;
+		}
+	}
+
+	&__link {
+		position: relative;
+		color: $black;
+		text-transform: uppercase;
+
+		@media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+			display: block;
+			padding: 0.5rem 1rem;
+		}
+
+		&:active,
+		&:focus {
+			color: $black;
+			text-decoration: none;
+		}
+
+		&:hover {
+			color: rgba($black, 0.8);
+		}
+
+		@media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+			color: white;
+
+			&:active,
+			&:focus {
+				color: white;
+			}
+
+			&:hover {
+				color: rgba(white, 0.8);
+			}
+		}
+
+		&.active::after {
+			position: absolute;
+			right: -1rem;
+			bottom: -3rem;
+			left: -1rem;
+			height: 45px;
+			background-image: url('../../assets/accents/Accent-15_LIGHT_BLUE--small.png');
+			background-position: center top;
+			background-size: 90px;
+			background-repeat: no-repeat;
+			content: '';
+
+			@media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+				bottom: -2.5rem;
+			}
+		}
+	}
+
+	button {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		border: none;
+		background: none;
+		white-space: nowrap;
+		font-weight: 600;
+
+		&.active,
+		&:focus {
+			outline: none;
+		}
+
+		.child-menu-icon {
+			margin-left: 0.5rem;
+			transition: transform 0.2s;
+		}
+
+		&.active .child-menu-icon {
+			transform: rotate(180deg);
+		}
+	}
+
+	.submenu {
+		position: absolute;
+		right: 0;
+		visibility: hidden;
+		padding: 1.5rem;
+		background-color: $gray;
+
+		a {
+			display: block;
+			color: black;
+		}
+
+		&.active {
+			visibility: visible;
+		}
+	}
+
+	@media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+		position: relative;
+		top: auto;
+		right: auto;
+		display: inline-block;
+		display: inline-flex;
+		margin-right: 0.75rem;
+		margin-left: auto;
+		padding: 1.5rem 0 0;
+		background-color: transparent;
+		letter-spacing: 0.0625em;
+		font-weight: 600;
+
+		@supports (align-items: center) {
+			align-items: center;
+			padding-top: 0;
+		}
+	}
+}
+
+.hamburger-icon-container {
+	display: inline-block;
+	align-items: center;
+	justify-content: center;
+	margin-left: 1.5rem;
+	border: none;
+	background: transparent;
+
+	@supports (display: flex) {
+		display: flex;
+	}
+
+	svg {
+		width: 1.5rem;
+		height: 1.375rem;
+
+		@media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+			width: 1.75rem;
+			height: 1.5rem;
+		}
+	}
+
+	@media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+		display: none;
+	}
+}

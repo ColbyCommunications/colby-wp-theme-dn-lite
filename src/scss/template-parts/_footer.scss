@@ -1,0 +1,57 @@
+.footer {
+	color: $white;
+	text-align: center;
+
+	.socialIcons {
+		display: flex;
+		justify-content: center;
+
+		a {
+			display: block;
+			margin-left: 1rem;
+			color: rgba($white, 0.6);
+		}
+	}
+}
+
+.footer-nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1.5rem;
+	background: $gray-dark;
+
+	.nav__logo-container::after {
+		border-right-width: 0;
+	}
+
+	.site-menu {
+		margin-left: 0;
+	}
+}
+
+.footer-address {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 1.5rem;
+	background: $black;
+	font-size: 0.891rem;
+
+	span {
+		display: flex;
+	}
+
+	span:not(:last-of-type) {
+
+		&::after {
+			display: block;
+			margin: 0 0.75rem;
+			content: '';
+
+			@media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+				content: '|';
+			}
+		}
+	}
+}

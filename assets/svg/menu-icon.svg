@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 418.26 291.34" class="menu-icon-svg">
+	<title>Menu</title>
+<style>
+.menu-icon-svg {
+ 	width: 42px;
+	height: 30px;
+}
+
+.menu-icon-svg rect {
+  fill: white;
+}
+</style>
+	<rect fill="currentColor" width="418.26" height="26.75"/>
+	<rect fill="currentColor" y="132.29" width="418.26" height="26.75"/>
+	<rect fill="currentColor" y="264.59" width="418.26" height="26.75"/>
+</svg>

@@ -1,0 +1,56 @@
+// Styles for the thumbnail shortcode.
+
+figure.thumb {
+	max-width: 14rem;
+
+	main &.alignright {
+		@media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+			float: right;
+			margin-right: -1rem;
+		}
+	}
+
+	@supports (clip-path: url('#oblong-circle-path')) and (display: grid) {
+
+		img {
+			position: relative;
+			z-index: 10;
+
+			&::before {
+				z-index: -1;
+				background: $gray-light;
+				content: '';
+				transform: rotate(-45deg) scale(1.06);
+
+				clip-path: url('#oblong-circle-path');
+
+				@extend .flush;
+			}
+		}
+
+		img {
+			position: relative;
+			z-index: 11;
+
+			clip-path: url('#oblong-circle-path');
+		}
+	}
+
+	.thumb__img {
+		width: 100%;
+	}
+
+	&.alignleft {
+		@media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+			float: left;
+		}
+
+		@media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+
+			figcaption {
+				margin-right: 0;
+				margin-left: -0.5rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,76 @@
+.archive {
+	position: relative;
+	padding: 6rem 0;
+	background-image: url('../../assets/Snowflake-Texture-invert.png');
+	background-size: 800px;
+
+	@supports (pointer-events: none) {
+
+		&::before,
+		&::after {
+			content: '';
+			pointer-events: none;
+
+			@extend .flush;
+		}
+
+		&::after {
+			background: rgba($black, 0.1);
+		}
+
+		&::before {
+			background-color: rgba(white, 0.7);
+		}
+	}
+
+	&.has-featured-image {
+		padding-top: 0;
+	}
+}
+
+.archive__inner {
+	flex-wrap: wrap;
+	margin: 0 auto;
+	max-width: map-get($grid-breakpoints, 'xl');
+
+	@extend .row;
+
+	.archive--events & {
+		max-width: map-get($grid-breakpoints, 'lg');
+	}
+}
+
+.archive-header {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	padding-top: 7.5rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	width: 100%;
+}
+
+.archive__more-button {
+	position: relative;
+	z-index: 5555;
+	margin-top: 1.5rem;
+	text-align: center;
+
+	button {
+		@include button-variant($blue, $blue);
+	}
+}
+
+.archive__nav-links {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+	width: 100%;
+	position: relative;
+	font-size: 0.891rem;
+	text-transform: uppercase;
+
+	> a:last-child {
+		margin-left: auto;
+	}
+}

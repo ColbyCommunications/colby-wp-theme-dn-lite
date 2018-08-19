@@ -1,0 +1,112 @@
+* {
+	min-width: 0;
+	min-height: 0;
+}
+
+body {
+	margin: 0;
+	font-size: 1.122rem;
+	font-family: $font-family-sans-serif;
+	line-height: 1.782;
+
+	> * {
+		overflow: hidden;
+		max-width: 100%;
+	}
+}
+
+a,
+a:focus,
+a:hover {
+	color: var(--primary);
+}
+
+img {
+	height: auto;
+}
+
+p {
+	margin-bottom: 1rem;
+}
+
+hr {
+	margin-top: 2.25rem;
+	margin-bottom: 2.25rem;
+	max-width: map-get($grid-breakpoints, 'lg');
+	width: 100%;
+}
+
+.main {
+	overflow: hidden;
+	min-height: 100vh;
+	width: 100%;
+
+	@supports (transform: translateY(100%)) {
+
+		> * {
+			transition: transform 750ms ease-in-out;
+			transform: translateX(0);
+		}
+
+		&.leaving {
+			overflow: visible;
+			min-height: 0;
+			height: 0;
+
+			> * {
+				transform: translateX(100vw);
+			}
+		}
+
+		&.entering {
+
+			> * {
+				transform: translateX(-100vw);
+			}
+		}
+
+		&.entered {
+			visibility: visible !important;
+
+			> * {
+				transform: translateX(0);
+			}
+		}
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 0.75rem;
+	font-family: $font-family-serif;
+	font-weight: 600;
+	line-height: 1.1;
+	color: inherit;
+}
+
+.innerMain {
+	padding-top: 6rem;
+}
+
+// Make buttons appear clickable.
+[role='button'],
+button {
+	cursor: pointer;
+}
+
+.btn {
+	padding: 0.75rem 1.5rem;
+	text-transform: uppercase;
+	font-size: 0.891rem;
+}
+
+// Disable pointer events for clickable elements within clickable elements.
+[role='button'] *,
+a *,
+button * {
+	pointer-events: none;
+}

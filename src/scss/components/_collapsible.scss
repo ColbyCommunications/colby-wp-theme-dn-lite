@@ -1,0 +1,60 @@
+// The styles for the collapsible component made available via shortcode.
+
+.collapsible-trigger {
+	position: relative;
+	display: block;
+	justify-content: flex-start;
+	padding: 0.75rem 3rem 0.75rem 1.5rem;
+	margin-top: 2.25rem;
+	border-width: 2px;
+	text-align: left;
+	text-transform: none;
+	font-size: 1.26rem;
+	font-family: 'Gotham', sans-serif;
+	transition: all 0.4s;
+	background-color: $blue;
+	color: $white;
+
+	.collapsed & {
+		background-color: $gray-light;
+		color: $black;
+		border-color: $gray-light;
+	}
+
+	&::before {
+		background-image: url('../../assets/Snowflake-Texture.png');
+		background-position: center;
+		background-size: 400px;
+		content: '';
+		opacity: 0.8;
+		transition: opacity 0.4s;
+
+		@extend .flush;
+
+		.collapsed & {
+			opacity: 0;
+		}
+	}
+
+	&::after {
+		position: absolute;
+		top: 0.5rem;
+		right: 3rem;
+		bottom: 0.75rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		content: '+';
+		text-align: center;
+		font-weight: 200;
+		font-size: 2rem;
+		font-family: serif;
+		transition: transform 0.4s;
+		transform: rotate(45deg);
+
+		.collapsed & {
+			outline: none;
+			transform: rotate(0);
+		}
+	}
+}

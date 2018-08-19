@@ -1,0 +1,19 @@
+<svg class="play-button-hollow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1206.338 1206.338">
+	<defs>
+		<style>
+.play-button-hollow {
+	height: 200px;
+	width: 200px;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.play-button-hollow * {
+  color: white;
+	fill: white;
+}
+		</style>
+	</defs>
+	<title>Play</title>
+	<path d="M618.169,15C285.048,15,15,285.048,15,618.169s270.048,603.169,603.169,603.169,603.169-270.048,603.169-603.169S951.29,15,618.169,15ZM949.983,653.554l-459.793,238.8a31.984,31.984,0,0,1-46.726-28.384V386.374a31.984,31.984,0,0,1,46.726-28.384l459.793,238.8C972.973,608.725,972.973,641.613,949.983,653.554Z" transform="translate(-15 -15)"/>
+</svg>

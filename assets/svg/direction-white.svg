@@ -1,0 +1,17 @@
+<svg version="1.1" class="direction-up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="78.105px" height="92.896px" viewBox="0 0 78.105 92.896">
+	 <title>North Arrow</title>
+<style>
+.direction-up {
+	height: 93px;
+	width: 78px;
+}
+
+.direction-up polygon, .direction-up path {
+  fill: white;
+}
+</style>
+<polygon fill="currentColor" points="0,92.896 39.053,80.396 39.053,0 "/>
+<path fill="currentColor" d="M39.053,5.161l35.526,84.508L39.662,78.492l-0.609-0.195l-0.61,0.195L3.527,89.669L39.053,5.161z M0,92.896
+	l39.053-12.5l39.054,12.5v-0.002L39.053,0L0,92.896z"/>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "name": "jwatkins/darenorthward",
+  "authors": [
+    {
+      "name": "johnwatkins0",
+      "email": "johnwatkins0@gmail.com"
+    }
+  ],
+  "scripts": {
+    "lint": "vendor/bin/phpcs -v",
+    "fix": "vendor/bin/phpcbf -v"
+  },
+  "autoload": {
+    "classmap": [
+      "inc/classes"
+    ]
+  },
+  "require-dev": {
+    "wp-coding-standards/wpcs": "^1.0",
+    "byjg/singleton-pattern": "^1.0"
+  }
+}

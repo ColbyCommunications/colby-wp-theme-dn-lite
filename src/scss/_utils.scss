@@ -1,0 +1,282 @@
+.flush {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.size-big-thumbnail {
+	width: 100%;
+
+	.post-content & {
+		max-width: 150px;
+	}
+}
+
+.post-edit-link {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-size: 0.891rem;
+	opacity: 0.7;
+}
+
+.blue-background-texture {
+	position: relative;
+
+	@supports (pointer-events: none) {
+
+		&::before {
+			background-color: rgba($blue, 0.8);
+			content: '';
+			pointer-events: none;
+
+			@extend .flush;
+		}
+
+		&::after {
+			z-index: 1;
+			background-image: url('../../assets/Snowflake-Texture.png');
+			background-position: center;
+			background-size: 800px;
+			content: '';
+			opacity: 0.6;
+			pointer-events: none;
+
+			@extend .flush;
+		}
+	}
+}
+
+.smudge-title {
+	position: relative;
+	z-index: 10;
+	margin-bottom: 3.5rem;
+	color: $blue;
+	font-size: 2.5rem;
+	line-height: 1;
+
+	@media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+		max-width: 450px;
+		font-size: 3.5rem;
+	}
+
+	a,
+	span {
+		position: relative;
+		z-index: 11;
+	}
+
+	&::after {
+		position: absolute;
+		right: -13rem;
+		bottom: -2.25rem;
+		left: -1.5rem;
+		z-index: -1;
+		height: 5rem;
+		background-image: url('../../assets/accents/Accent-9_GRAY.png');
+		background-size: 450px;
+		background-repeat: no-repeat;
+		content: '';
+	}
+
+	&.smudge-title--blue::after {
+		background-image: url('../../assets/accents/Accent-9_WHITE.png');
+	}
+}
+
+.callout-box {
+	display: block;
+	margin-top: 2.25rem;
+	padding: 1.5rem 0.75rem 2.25rem;
+	max-width: 400px;
+	color: $white;
+	text-align: center;
+	font-weight: 600;
+	font-size: 1.5rem;
+	font-family: 'Argent', serif;
+	line-height: 1.4;
+	transition: transform 0.2s;
+	transform: scale(0.944);
+
+	@extend .blue-background-texture, .mx-auto;
+
+	&::before {
+		background: $blue;
+	}
+
+	&:hover {
+		color: $white;
+		text-decoration: none;
+		transform: scale(1);
+	}
+
+	span {
+		position: relative;
+
+		&::after {
+			position: absolute;
+			right: -9rem;
+			bottom: -4.75rem;
+			left: -4rem;
+			height: 3rem;
+			background-image: url('../../assets/COLBY_HERO_texture.png');
+			background-size: cover;
+			content: '';
+		}
+	}
+}
+
+.dropcap {
+
+	&::first-letter {
+		float: left;
+		margin-top: 0.375rem;
+		margin-right: 1rem;
+		margin-bottom: 0.75rem;
+		color: $blue;
+		font-weight: 400;
+		font-size: 7.1rem;
+		font-family: 'Argent', serif;
+		line-height: 0.6;
+		transform: translateY(-1.5rem);
+	}
+}
+
+.big-white-text-block {
+	z-index: 16;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	padding: 12rem 1.5rem 6rem;
+	color: white;
+	font-weight: 600;
+	font-size: 1.333rem;
+	font-family: $font-family-serif;
+	line-height: 1.5;
+
+	@media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+		padding: 14.5rem 1.5rem;
+		font-size: 1.682rem;
+	}
+
+	@media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+		max-width: map-get($grid-breakpoints, 'md');
+		font-size: 1.782rem;
+	}
+
+	@media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+		max-width: map-get($grid-breakpoints, 'lg');
+		font-size: 2rem;
+	}
+}
+
+.white-smudge-title {
+	position: absolute;
+	top: 1.5rem;
+	left: 1rem;
+	z-index: 444;
+	max-width: 540px;
+	color: $white;
+	font-size: 3.75rem;
+	line-height: 0.841;
+
+	@media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+		font-size: 4.5rem;
+	}
+
+	&::after {
+		position: absolute;
+		top: calc(100% - 1.5rem);
+		right: -13rem;
+		left: -1rem;
+		display: block;
+		height: 6rem;
+		background-image: url('../../assets/accents/Accent-9_GRAY.png');
+		background-size: 280px;
+		background-repeat: no-repeat;
+		content: '';
+
+		@media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+			background-size: 450px;
+		}
+	}
+}
+
+.wp-block-image figcaption {
+	position: relative;
+	margin-top: 0.75rem;
+	margin-bottom: 0.75rem;
+	position: relative;
+	z-index: 1;
+	padding: 0.75rem;
+	background: $blue;
+	color: white;
+	line-height: 1.682;
+
+	&::after {
+		z-index: 3;
+		background-image: url('../../assets/svg/direction-black.svg');
+		background-position: 120%;
+		background-size: 100px;
+		background-repeat: no-repeat;
+		content: '';
+		opacity: 0.2;
+
+		@extend .flush;
+	}
+
+	> span {
+		position: relative;
+		z-index: 7;
+	}
+
+	&::before {
+		z-index: 2;
+		background-image: url('../../assets/Snowflake-Texture.png');
+		background-position: center;
+		background-size: 400px;
+		content: '';
+		opacity: 0.6;
+
+		@extend .flush;
+	}
+}
+
+.lazyload.fade-up {
+	@supports (transform: translate3d(0, 75px, 0)) {
+		opacity: 0;
+		transition: opacity 1.5s, transform 1.5s;
+		transform: translate3d(0, 75px, 0);
+
+		&:nth-of-type(even) {
+			transition: opacity 1s, transform 1s;
+			transform: translate3d(0, 50px, 0);
+		}
+
+		&.loaded {
+			opacity: 1;
+			transform: translate3d(0, 0, 0);
+		}
+	}
+}
+
+.fade-up:not(.lazyload) {
+	@supports (animation-fill-mode: both) {
+		animation-name: fadeUp;
+		animation-duration: 1.5s;
+
+		animation-fill-mode: both;
+	}
+}
+
+.fade-in:not(.lazyload) {
+	@supports (animation-fill-mode: both) {
+		animation-name: fadeIn;
+		animation-duration: 1.5s;
+
+		animation-fill-mode: both;
+	}
+}

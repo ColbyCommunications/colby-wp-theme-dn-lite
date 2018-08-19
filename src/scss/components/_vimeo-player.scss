@@ -1,0 +1,93 @@
+// Styles for the vimeo player shortcode.
+
+.wp-block-embed-vimeo {
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 0 auto 2.25rem;
+	padding-top: 2.25rem;
+
+	> iframe {
+		margin-right: auto;
+		margin-bottom: 1.5rem;
+		margin-left: auto;
+		padding-right: 0;
+		padding-left: 0;
+
+		@extend .col-12, .col-md-8;
+	}
+
+	> figcaption {
+		position: relative;
+		padding-right: 0;
+		padding-left: 0;
+		color: $blue;
+		font-weight: 600;
+		font-size: 1.588rem;
+		font-family: $font-family-serif;
+		line-height: 1.682;
+
+		@extend .col-md-4;
+
+		@media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+			padding-left: 1.5rem;
+			padding-left: 1.5rem;
+			max-width: 240px;
+		}
+	}
+}
+
+.VimeoPlayer {
+	position: relative;
+}
+
+.VimeoPlayer__video {
+	width: 100%;
+	height: auto;
+	cursor: pointer;
+}
+
+.VimeoPlayer__cover {
+	display: none;
+	pointer-events: none;
+
+	@supports (pointer-events: none) and (opacity: 0) {
+		display: block;
+		border: none;
+		background: transparent;
+		background-size: cover;
+		transition: opacity 0.2s;
+
+		@extend .flush;
+
+		.playing & {
+			opacity: 0;
+			pointer-events: none;
+		}
+
+		&::after {
+			background-image: url('../../assets/svg/play-button-hollow.svg');
+			background-position: center;
+			background-size: 75px;
+			background-repeat: no-repeat;
+			content: '';
+			transition: transform 0.2s;
+			pointer-events: none;
+
+			@extend .flush;
+		}
+
+		&:hover::after {
+			transform: scale(1.06);
+		}
+	}
+}
+
+.VimeoPlayer__custom-cover {
+	pointer-events: none;
+
+	.playing & {
+		pointer-events: none;
+	}
+}

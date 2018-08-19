@@ -1,0 +1,67 @@
+{
+	"name": "darenorthward",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"dev": "cross-env NODE_ENV=development webpack -w",
+		"prod": "cross-env NODE_ENV=production webpack",
+		"lint": "eslint src",
+		"lint-fix": "eslint src --fix",
+		"lint-css": "stylelint '**/*.scss'",
+		"lint-css-fix": "stylelint '**/*.scss' --fix"
+	},
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"author": "",
+	"browserslist": [
+		"extends @wordpress/browserslist-config"
+	],
+	"stylelint": {
+		"extends": [
+			"stylelint-config-xwp/scss"
+		]
+	},
+	"babel": {
+		"presets": [
+			"@babel/preset-env"
+		]
+	},
+	"devDependencies": {
+		"@babel/core": "^7.0.0-rc.1",
+		"@babel/preset-env": "^7.0.0-rc.1",
+		"@babel/register": "^7.0.0-rc.1",
+		"@wordpress/babel-plugin-import-jsx-pragma": "^1.0.3",
+		"@wordpress/babel-preset-default": "^2.0.4",
+		"@wordpress/browserslist-config": "^2.2.1",
+		"autoprefixer": "^9.1.1",
+		"babel-eslint": "^8.2.6",
+		"babel-loader": "^7.1.5",
+		"cross-env": "^5.2.0",
+		"css-loader": "^1.0.0",
+		"cssnano": "^4.0.5",
+		"eslint": "^5.4.0",
+		"eslint-config-wordpress": "^2.0.0",
+		"eslint-plugin-jsx-a11y": "^6.1.1",
+		"eslint-plugin-react": "^7.11.1",
+		"eslint-plugin-wordpress": "git://github.com/WordPress-Coding-Standards/eslint-plugin-wordpress.git#1774343f6226052a46b081e01db3fca8793cc9f1",
+		"extract-text-webpack-plugin": "^4.0.0-beta.0",
+		"file-loader": "^1.1.11",
+		"node-sass": "^4.9.3",
+		"optimize-css-assets-webpack-plugin": "^5.0.0",
+		"postcss-loader": "^3.0.0",
+		"react-animate-height": "^2.0.4",
+		"sass-loader": "^7.1.0",
+		"style-loader": "^0.22.1",
+		"stylelint": "^9.4.0",
+		"stylelint-config-xwp": "git+https://github.com/xwp/stylelint-config-xwp.git",
+		"webpack": "^4.16.5",
+		"webpack-cli": "^3.1.0"
+	},
+	"dependencies": {
+		"bootstrap-4-grid": "^2.4.1",
+		"classnames": "^2.2.6",
+		"react": "^16.4.2"
+	}
+}

@@ -1,0 +1,180 @@
+// Styles for a single post/page.
+
+.single {
+	position: relative;
+	z-index: 6;
+	padding: 0;
+	max-width: none;
+
+	@supports (pointer-events: none) {
+
+		&::before {
+			z-index: 5;
+			background: rgba(white, 0.4);
+			content: '';
+
+			@extend .flush;
+		}
+
+		&::after {
+			z-index: 4;
+			background-image: url('../../assets/Snowflake-Texture-invert.png');
+			background-position: 1000% 2000px;
+			background-size: 1200px;
+			background-repeat: no-repeat;
+			content: '';
+
+			@extend .flush;
+		}
+	}
+
+	.extra-post-background {
+		@extend .flush;
+
+		@supports (pointer-events: none) {
+
+			&::after {
+				z-index: 4;
+				background-image: url('../../assets/Snowflake-Texture-invert.png');
+				background-position: -1022% 1000px;
+				background-size: 1200px;
+				background-repeat: no-repeat;
+				content: '';
+
+				@extend .flush;
+			}
+
+			&::before {
+				z-index: 4;
+				background-image: url('../../assets/Snowflake-Texture-invert.png');
+				background-position: 1000% top;
+				background-size: 1200px;
+				background-repeat: no-repeat;
+				content: '';
+
+				@extend .flush;
+			}
+		}
+	}
+
+	.post-content {
+		position: relative;
+		z-index: 7;
+		margin: 0 auto;
+		padding: 1.5rem 1rem 4.5rem;
+		max-width: map-get($grid-breakpoints, 'lg');
+		background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0));
+		font-size: 1.122rem;
+
+		> h1 {
+			margin-bottom: 3rem;
+			text-align: center;
+		}
+
+		.has-featured-image & {
+			padding-top: 3rem;
+		}
+
+		.row > [class^='col'] {
+			@media screen and (max-width: map-get($grid-breakpoints, 'md')) {
+				padding-right: 0;
+				padding-left: 0;
+			}
+		}
+
+		> * {
+
+			> .collapsible,
+			> .dnGallery,
+			> .row,
+			> dl,
+			> h2,
+			> h3,
+			> h4,
+			> h5,
+			> h6,
+			> hr,
+			> ol,
+			> p,
+			> section,
+			> ul,
+			> h1 {
+				margin-right: auto;
+				margin-left: auto;
+				max-width: map-get($grid-breakpoints, 'md');
+
+				.extra-wide & {
+					max-width: map-get($grid-breakpoints, 'xl');
+				}
+			}
+
+			> p {
+				margin-bottom: 1rem;
+			}
+		}
+
+		.post__date {
+			margin: 0 auto;
+			max-width: map-get($grid-breakpoints, 'md');
+
+			.extra-wide & {
+				max-width: map-get($grid-breakpoints, 'xl');
+			}
+		}
+	}
+
+	&.no-featured-image {
+
+		.post-content {
+			padding-top: 9rem;
+		}
+
+		.post-content__header {
+			padding-bottom: 0.75rem;
+
+			h1 {
+				margin-bottom: 1.5rem;
+				color: $black;
+				text-align: center;
+				font-size: 2rem;
+
+				@media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+					font-size: 3rem;
+				}
+			}
+		}
+	}
+
+	&.extra-wide {
+
+		.post-content {
+			max-width: 1600px;
+
+			> * {
+
+				> .collapsible,
+				> .dnGallery,
+				> .row,
+				> dl,
+				> h2,
+				> h3,
+				> h4,
+				> h5,
+				> h6,
+				> hr,
+				> ol,
+				> p,
+				> section,
+				> ul,
+				> h1 {
+					max-width: map-get($grid-breakpoints, 'xl');
+				}
+			}
+		}
+	}
+
+	&.events {
+		margin: 0 auto;
+		max-width: map-get($grid-breakpoints, 'md');
+	}
+}

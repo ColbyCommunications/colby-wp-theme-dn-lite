@@ -1,0 +1,39 @@
+// Styles for the text on image shortcode.
+
+.text-on-image {
+	position: relative;
+	display: flex;
+	justify-content: center;
+
+	&__inner {
+		padding: 1.5rem;
+
+		> div {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			text-align: center;
+			text-transform: uppercase;
+			text-shadow: 0 0 0.5rem rgba($gray-dark, 0.7);
+			letter-spacing: 0.0625em;
+			font-weight: 600;
+			font-size: 1.588rem;
+			line-height: 1;
+
+			a {
+				color: white;
+			}
+		}
+	}
+}
+
+a.text-on-image {
+	transition: transform 0.2s;
+
+	will-change: transform;
+
+	&:hover {
+		transform: scale(1.06);
+	}
+}

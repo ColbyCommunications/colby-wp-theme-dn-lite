@@ -1,0 +1,57 @@
+main {
+
+	.alignleft,
+	.alignright,
+	.aligncenter,
+	.alignnone {
+		position: relative;
+		display: block;
+		margin-right: auto;
+		margin-bottom: 1.5rem;
+		margin-left: auto;
+	}
+
+	.alignright {
+		@media screen and(min-width: map-get($grid-breakpoints, 'sm')) {
+			float: right;
+			margin-left: 2.25rem;
+		}
+
+		@media screen and(min-width: map-get($grid-breakpoints, 'lg')) {
+			margin-right: -1.5rem;
+		}
+
+		@media screen and(min-width: map-get($grid-breakpoints, 'xl')) {
+			margin-right: -3rem;
+		}
+	}
+
+	.alignleft {
+		@media screen and(min-width: map-get($grid-breakpoints, 'sm')) {
+			float: left;
+			margin-right: 2.25rem;
+		}
+
+		@media screen and(min-width: map-get($grid-breakpoints, 'lg')) {
+			margin-left: -1.5rem;
+		}
+
+		@media screen and(min-width: map-get($grid-breakpoints, 'xl')) {
+			margin-left: -3rem;
+		}
+	}
+
+	.aligncenter,
+	.alignnone {
+		margin-top: 1.5rem;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	img.aligncenter,
+	img.alignnone {
+		max-width: 100%;
+	}
+}
