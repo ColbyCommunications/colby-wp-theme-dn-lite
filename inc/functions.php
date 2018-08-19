@@ -70,14 +70,14 @@ function the_single_post_header_image() {
  * @return void
  */
 function header_image( $settings ) {
-	$image_url = $settings['image-url'] ?? '';
+	$image_url = isset( $settings['image-url'] ) ? $settings['image-url'] : '';
 
 	if ( empty( $image_url ) ) {
 		return;
 	}
 
-	$title   = $settings['title'] ?? '';
-	$subhead = $settings['subhead'] ?? '';
+	$title   = isset( $settings['title'] ) ? $settings['title'] : '';
+	$subhead = isset( $settings['subhead'] ) ? $settings['subhead'] : '';
 
 	include locate_template( 'templates/partials/header-image.php' );
 }
