@@ -5,11 +5,9 @@
  * @package colby/darenorthward
  */
 
-use function Colby\Darenorthward\Functions\{
-	the_term_header_image,
-	has_term_header_image,
-	the_archive_post_thumbnail
-};
+use function Colby\Darenorthward\Functions\the_term_header_image;
+use function Colby\Darenorthward\Functions\has_term_header_image;
+use function Colby\Darenorthward\Functions\the_archive_post_thumbnail;
 
 get_header();
 

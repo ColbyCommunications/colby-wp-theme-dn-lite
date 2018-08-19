@@ -7,7 +7,8 @@
 
 namespace Colby\DareNorthward\Functions;
 
-use Colby\DareNorthward\{Dare_Northward, Nav_Menu};
+use Colby\DareNorthward\Dare_Northward;
+use Colby\DareNorthward\Nav_Menu;
 
 /**
  * Gets the URL of the single post header image.

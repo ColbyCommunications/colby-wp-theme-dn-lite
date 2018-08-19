@@ -5,13 +5,11 @@
  * @package colby/darenorthward
  */
 
-use function Colby\DareNorthward\Functions\{
-	footer_nav,
-	footer_address,
-	nav_menu,
-	clip_path_svg,
-	header_nav
-};
+use function Colby\DareNorthward\Functions\footer_nav;
+use function Colby\DareNorthward\Functions\footer_address;
+use function Colby\DareNorthward\Functions\nav_menu;
+use function Colby\DareNorthward\Functions\clip_path_svg;
+use function Colby\DareNorthward\Functions\header_nav;
 
 ?>
 </main>

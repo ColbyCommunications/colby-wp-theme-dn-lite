@@ -5,10 +5,8 @@
  * @package colby/darenorthward
  */
 
-use function Colby\Darenorthward\Functions\{
-	the_single_post_header_image,
-	has_single_post_header_image
-};
+use function Colby\Darenorthward\Functions\the_single_post_header_image;
+use function Colby\Darenorthward\Functions\has_single_post_header_image;
 
 get_header();
 

@@ -8,10 +8,8 @@
 namespace Colby\DareNorthward;
 
 use Colby\DareNorthward\Traits\Singleton;
-use function Colby\DareNorthward\Functions\{
-	darenorthward_asset_url,
-	darenorthward_file_version
-};
+use function Colby\DareNorthward\Functions\darenorthward_asset_url;
+use function Colby\DareNorthward\Functions\darenorthward_file_version;
 
 /**
  * Theme setup
